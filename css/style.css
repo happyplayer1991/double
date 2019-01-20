@@ -50,55 +50,56 @@ a:hover,a:focus {
 }
 #mainContent #intro .step {
 	position: absolute;
-	display: flex;
-	justify-content: center;
 	top: 0;
 	width: 100%;
 	height: 100vh;
 	opacity: 0;
-}
-#mainContent #intro .step:not(.active) {
 	visibility: hidden;
 }
+#mainContent #intro .step.active {
+	visibility: visible;
+	opacity: 1;
+}
 #mainContent #intro .step .step-body {
-	align-self: center;
+	position: absolute;
+	top: 30vh;
+	left: 20vw;
 }
 
 /* Range Slider */
-#mainContent #rangeSlider {
+#mainContent #sliderWrapper {
 	position: absolute;
 	width: 100%;
 	bottom: 50px;
 }
-#mainContent #rangeSlider .sliderLabels {
+#mainContent #sliderWrapper #stepSlider {
+	height: 1px;
+	border: none;
+}
+#mainContent #sliderWrapper #stepSlider .noUi-handle {
+	width: 26px;
+	height: 26px;
+	top: -13px;
+	border-radius: 100%;
+	border: none;
+	box-shadow: none;
+	outline: none;
+	background-image: linear-gradient(313deg, #ff4b1f, #f06b3b);
+}
+#mainContent #sliderWrapper #stepSlider .noUi-handle:before, #mainContent #sliderWrapper #stepSlider .noUi-handle:after {
+	content: none;
+}
+#mainContent #sliderWrapper .sliderLabels {
 	display: flex;
 	margin-top: 20px;
 }
-#mainContent #rangeSlider .sliderLabels .left,#mainContent #rangeSlider .sliderLabels .right {
+#mainContent #sliderWrapper .sliderLabels .left,#mainContent #sliderWrapper .sliderLabels .right {
 	flex: 1;
 }
-#mainContent #rangeSlider .sliderLabels .right {
+#mainContent #sliderWrapper .sliderLabels .right {
 	text-align: right;
 }
-#mainContent #rangeSlider .sliderLabels span {
+#mainContent #sliderWrapper .sliderLabels span {
 	font-size: 10px;
 	letter-spacing: 1.2px;
-}
-#mainContent #rangeSlider .sliderWrapper .rangeslider--horizontal {
-	height: 1px;
-	background-color: #b4b4b4;
-}
-#mainContent #rangeSlider .sliderWrapper .rangeslider__fill {
-	background-color: #ff4b1f;
-}
-#mainContent #rangeSlider .sliderWrapper .rangeslider__handle {
-	width: 26px;
-	height: 26px;
-	border-radius: 100%;
-	border: none;
-	top: -13px;
-	background-image: linear-gradient(313deg, #ff4b1f, #f06b3b);
-}
-#mainContent #rangeSlider .sliderWrapper .rangeslider__handle:after {
-	content: none;
 }
