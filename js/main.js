@@ -16,6 +16,5 @@ $(function () {
 	slider.on('slide', function(value) {
 		$('#intro').find('.step').removeClass('active')
 		$('#intro').find(`.step-${Number(value)}`).addClass('active')
-		console.log(value)
 	})
 })

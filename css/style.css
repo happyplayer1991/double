@@ -51,6 +51,7 @@ a:hover,a:focus {
 #mainContent #intro .step {
 	position: absolute;
 	top: 0;
+	padding-top: 30vh;
 	width: 100%;
 	height: 100vh;
 	opacity: 0;
@@ -59,11 +60,6 @@ a:hover,a:focus {
 #mainContent #intro .step.active {
 	visibility: visible;
 	opacity: 1;
-}
-#mainContent #intro .step .step-body {
-	position: absolute;
-	top: 30vh;
-	left: 20vw;
 }
 
 /* Range Slider */
@@ -94,7 +90,7 @@ a:hover,a:focus {
 	margin-top: 20px;
 }
 #mainContent #sliderWrapper .sliderLabels .left,#mainContent #sliderWrapper .sliderLabels .right {
-	flex: 1;
+	flex: auto;
 }
 #mainContent #sliderWrapper .sliderLabels .right {
 	text-align: right;
@@ -102,4 +98,26 @@ a:hover,a:focus {
 #mainContent #sliderWrapper .sliderLabels span {
 	font-size: 10px;
 	letter-spacing: 1.2px;
+}
+
+@media screen and (max-width: 768px) {
+	.container,.container-fluid {
+		padding: 0 20px;
+	}
+	#mainContent #header {
+		padding-top: 10px;
+	}
+	#mainContent .navbar-expand > .container, #mainContent .navbar-expand > .container-fluid {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	#mainContent #intro p, #mainContent #intro a {
+		font-size: 16px;
+	}
+	#mainContent #sliderWrapper {
+		bottom: 20px;
+	}
+	#mainContent #intro .step {
+		padding-top: 70px;
+	}
 }
