@@ -1,0 +1,104 @@
+/* Import Font Montserrat */
+@import url(https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700);
+
+body {
+	font-family: Montserrat;
+	font-size: 14px;
+	background-image: linear-gradient(302deg, #23303d, #303943);
+	color: #fff;
+}
+#mainContent {
+	position: relative;
+	height: 100vh;
+}
+
+/* Global */
+a {
+	color: #fff;
+	transition: .3s;
+	text-decoration: underline;
+}
+a:hover,a:focus {
+	color: #ff4b1f;
+}
+
+/* Navbar */
+#mainContent #header {
+	padding-top: 60px;
+}
+#mainContent .navbar {
+	position: relative;
+	padding-left: 0;
+	padding-right: 0;
+	z-index: 1030;
+}
+#mainContent .navbar-expand > .container, #mainContent .navbar-expand > .container-fluid {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+#mainContent .navbar .navbar-nav .nav-link {
+	letter-spacing: 0.8px;
+	padding-left: 40px;
+	text-decoration: none;
+}
+
+/* Introduction */
+#mainContent #intro p,#mainContent #intro a {
+	font-size: 20px;
+	letter-spacing: 1px;
+	transition: .3s;
+}
+#mainContent #intro .step {
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	top: 0;
+	width: 100%;
+	height: 100vh;
+	opacity: 0;
+}
+#mainContent #intro .step:not(.active) {
+	visibility: hidden;
+}
+#mainContent #intro .step .step-body {
+	align-self: center;
+}
+
+/* Range Slider */
+#mainContent #rangeSlider {
+	position: absolute;
+	width: 100%;
+	bottom: 50px;
+}
+#mainContent #rangeSlider .sliderLabels {
+	display: flex;
+	margin-top: 20px;
+}
+#mainContent #rangeSlider .sliderLabels .left,#mainContent #rangeSlider .sliderLabels .right {
+	flex: 1;
+}
+#mainContent #rangeSlider .sliderLabels .right {
+	text-align: right;
+}
+#mainContent #rangeSlider .sliderLabels span {
+	font-size: 10px;
+	letter-spacing: 1.2px;
+}
+#mainContent #rangeSlider .sliderWrapper .rangeslider--horizontal {
+	height: 1px;
+	background-color: #b4b4b4;
+}
+#mainContent #rangeSlider .sliderWrapper .rangeslider__fill {
+	background-color: #ff4b1f;
+}
+#mainContent #rangeSlider .sliderWrapper .rangeslider__handle {
+	width: 26px;
+	height: 26px;
+	border-radius: 100%;
+	border: none;
+	top: -13px;
+	background-image: linear-gradient(313deg, #ff4b1f, #f06b3b);
+}
+#mainContent #rangeSlider .sliderWrapper .rangeslider__handle:after {
+	content: none;
+}
