@@ -3,12 +3,9 @@
 
 body {
 	font-family: Montserrat;
-	font-size: 14px;
+	font-size: 16px;
 	background-image: linear-gradient(302deg, #23303d, #303943);
 	color: #fff;
-}
-#mainContent {
-	position: relative;
 	height: 100vh;
 }
 
@@ -23,32 +20,41 @@ a:hover,a:focus {
 }
 
 /* Navbar */
-#mainContent #header {
-	padding-top: 60px;
+#header {
+	position: absolute;
+	top: 60px;
+	width: 100%
 }
-#mainContent .navbar {
+.navbar {
 	position: relative;
 	padding-left: 0;
 	padding-right: 0;
 	z-index: 1030;
 }
-#mainContent .navbar-expand > .container, #mainContent .navbar-expand > .container-fluid {
+.navbar-expand > .container, .navbar-expand > .container-fluid {
 	padding-left: 15px;
 	padding-right: 15px;
 }
-#mainContent .navbar .navbar-nav .nav-link {
+.navbar .navbar-nav .nav-item {
+	padding-left: 60px;
+}
+.navbar .navbar-nav .nav-link {
 	letter-spacing: 0.8px;
-	padding-left: 40px;
 	text-decoration: none;
+	padding: 0;
+	padding-bottom: 5px;
+}
+.navbar .navbar-nav .nav-link.active {
+	border-bottom: 2px solid #fff;
 }
 
 /* Introduction */
-#mainContent #intro p,#mainContent #intro a {
+#intro p,#intro a {
 	font-size: 20px;
 	letter-spacing: 1px;
 	transition: .3s;
 }
-#mainContent #intro .step {
+#intro .step {
 	position: absolute;
 	top: 0;
 	padding-top: 30vh;
@@ -58,22 +64,22 @@ a:hover,a:focus {
 	opacity: 0;
 	visibility: hidden;
 }
-#mainContent #intro .step.active {
+#intro .step.active {
 	visibility: visible;
 	opacity: 1;
 }
 
 /* Range Slider */
-#mainContent #sliderWrapper {
+#sliderWrapper {
 	position: absolute;
 	width: 100%;
 	bottom: 50px;
 }
-#mainContent #sliderWrapper #stepSlider {
+#sliderWrapper #stepSlider {
 	height: 1px;
 	border: none;
 }
-#mainContent #sliderWrapper #stepSlider .noUi-handle {
+#sliderWrapper #stepSlider .noUi-handle {
 	width: 26px;
 	height: 26px;
 	top: -13px;
@@ -83,43 +89,83 @@ a:hover,a:focus {
 	outline: none;
 	background-image: linear-gradient(313deg, #ff4b1f, #f06b3b);
 }
-#mainContent #sliderWrapper #stepSlider .noUi-handle:before, #mainContent #sliderWrapper #stepSlider .noUi-handle:after {
+#sliderWrapper #stepSlider .noUi-handle:before, #sliderWrapper #stepSlider .noUi-handle:after {
 	content: none;
 }
-#mainContent #sliderWrapper .sliderLabels {
+#sliderWrapper .sliderLabels {
 	display: flex;
 	margin-top: 20px;
 }
-#mainContent #sliderWrapper .sliderLabels .left,#mainContent #sliderWrapper .sliderLabels .right {
+#sliderWrapper .sliderLabels .left,#sliderWrapper .sliderLabels .right {
 	flex: auto;
 }
-#mainContent #sliderWrapper .sliderLabels .right {
+#sliderWrapper .sliderLabels .right {
 	text-align: right;
 }
-#mainContent #sliderWrapper .sliderLabels span {
+#sliderWrapper .sliderLabels span {
 	font-size: 10px;
 	letter-spacing: 1.2px;
 }
 
-@media screen and (max-width: 768px) {
+/* Contact page */
+#mainContent {
+	background-image: linear-gradient(302deg, #ff4b1f, #f06b3b);
+	height: 100vh;
+}
+#contact {
+	display: flex;
+	height: 100vh;
+}
+#contact .contact-content {
+	align-self: center;
+}
+#contact h1 {
+	font-size: 50px;
+	font-weight: 600;
+	letter-spacing: -0.3px;
+	margin-bottom: 40px;
+}
+#contact .contact-info {
+	margin-bottom: 40px;
+}
+#contact .contact-info p {
+	margin: 0;
+}
+#contact .social-icons li {
+	margin-right: 25px;
+}
+#contactBackground {
+	position: absolute;
+	background: url(../img/img-contact.png);
+	background-size: cover;
+	width: 41.666667%;
+	height: 100vh;
+	top: 0;
+	right: 0;
+}
+
+@media screen and (max-width: 767px) {
 	.container,.container-fluid {
 		padding: 0 20px;
 	}
-	#mainContent #header {
-		padding-top: 10px;
+	#header {
+		top: 10px;
 	}
-	#mainContent .navbar-expand > .container, #mainContent .navbar-expand > .container-fluid {
+	.navbar-expand > .container, .navbar-expand > .container-fluid {
 		padding-left: 20px;
 		padding-right: 20px;
 	}
-	#mainContent #intro p, #mainContent #intro a {
+	#intro p, #intro a {
 		font-size: 16px;
 	}
-	#mainContent #sliderWrapper {
+	#sliderWrapper {
 		bottom: 20px;
 	}
-	#mainContent #intro .step {
+	#intro .step {
 		padding-top: 70px;
 		padding-left: 0;
+	}
+	#contactBackground {
+		display: none;
 	}
 }
