@@ -22,7 +22,7 @@ a:hover,a:focus {
 /* Navbar */
 #header {
 	position: absolute;
-	top: 60px;
+	top: 40px;
 	width: 100%
 }
 .navbar {
@@ -35,14 +35,15 @@ a:hover,a:focus {
 	padding-left: 15px;
 	padding-right: 15px;
 }
-.navbar .navbar-nav .nav-item {
-	padding-left: 60px;
+.navbar .navbar-nav .nav-item:not(:first-child) {
+	padding-left: 50px;
 }
 .navbar .navbar-nav .nav-link {
 	letter-spacing: 0.8px;
 	text-decoration: none;
 	padding: 0;
 	padding-bottom: 5px;
+	font-size: 14px;
 }
 .navbar .navbar-nav .nav-link.active {
 	border-bottom: 2px solid #fff;
@@ -130,6 +131,7 @@ a:hover,a:focus {
 }
 #contact .contact-info p {
 	margin: 0;
+	letter-spacing: 1px;
 }
 #contact .social-icons li {
 	margin-right: 25px;
@@ -144,6 +146,47 @@ a:hover,a:focus {
 	right: 0;
 }
 
+/* Portfolio */
+.portfolio {
+	background-size: cover;
+	position: relative;
+	cursor: pointer;
+	transition: .3s;
+}
+.portfolio:hover:before {
+	background-color: #ff4b1f;
+}
+.portfolio:before {
+	content: '';
+	position: absolute;
+	transition: .3s;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: rgba(35, 48, 61, 0.1);
+}
+.portfolio-body {
+	position: absolute;
+	bottom: 40px;
+	padding: 0 40px;
+
+}
+.portfolio-body .description {
+	font-size: 24px;
+	font-weight: 600;
+	letter-spacing: 0.8px;
+	margin: 0;
+	max-width: 400px;
+}
+.portfolio-body .company {
+	font-size: 18px;
+	font-weight: 300;
+	letter-spacing: -0.2px;
+	margin: 0;
+	line-height: 50px;
+}
+
 @media screen and (max-width: 767px) {
 	.container,.container-fluid {
 		padding: 0 20px;
@@ -154,6 +197,9 @@ a:hover,a:focus {
 	.navbar-expand > .container, .navbar-expand > .container-fluid {
 		padding-left: 20px;
 		padding-right: 20px;
+	}
+	.navbar .navbar-nav .nav-item:not(:first-child) {
+		padding-left: 10px;
 	}
 	#intro p, #intro a {
 		font-size: 16px;
