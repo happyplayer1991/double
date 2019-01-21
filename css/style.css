@@ -32,8 +32,8 @@ a:hover,a:focus {
 	z-index: 1030;
 }
 .navbar-expand > .container, .navbar-expand > .container-fluid {
-	padding-left: 15px;
-	padding-right: 15px;
+	padding-left: 40px;
+	padding-right: 40px;
 }
 .navbar .navbar-nav .nav-item:not(:first-child) {
 	padding-left: 50px;
@@ -188,8 +188,17 @@ a:hover,a:focus {
 }
 
 @media screen and (max-width: 767px) {
+	body {
+		height: auto;
+	}
+	#mainContent {
+		height: auto;
+	}
 	.container,.container-fluid {
 		padding: 0 20px;
+	}
+	.row {
+		margin: 0 -20px;
 	}
 	#header {
 		top: 10px;
@@ -199,7 +208,7 @@ a:hover,a:focus {
 		padding-right: 20px;
 	}
 	.navbar .navbar-nav .nav-item:not(:first-child) {
-		padding-left: 10px;
+		padding-left: 20px;
 	}
 	#intro p, #intro a {
 		font-size: 16px;
@@ -213,5 +222,13 @@ a:hover,a:focus {
 	}
 	#contactBackground {
 		display: none;
+	}
+	.portfolio {
+		border: none !important;
+		min-height: 50vh;
+	}
+	.portfolio .portfolio-body {
+		bottom: 20px;
+		padding: 0 20px;
 	}
 }
